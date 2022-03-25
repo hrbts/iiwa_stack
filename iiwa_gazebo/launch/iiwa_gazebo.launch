@@ -28,7 +28,13 @@
         
         <include file="$(find iiwa_control)/launch/iiwa_control.launch">
             <arg name="hardware_interface" value="$(arg hardware_interface)" />
-            <arg name="controllers" value="joint_state_controller $(arg hardware_interface)_trajectory_controller" />
+            <arg name="controllers" value="joint_state_controller PositionJointInterface_J1_controller
+      PositionJointInterface_J2_controller
+      PositionJointInterface_J3_controller
+      PositionJointInterface_J4_controller
+      PositionJointInterface_J5_controller
+      PositionJointInterface_J6_controller
+      PositionJointInterface_J7_controller" />
             <arg name="robot_name" value="$(arg robot_name)" />
             <arg name="model" value="$(arg model)" />
         </include>
